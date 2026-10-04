@@ -113,7 +113,7 @@ const Checkout = () => {
     try {
 
       const response = await fetch(
-        'http://localhost:8090/food',
+        'https://e-commerce-backend-production-ce82.up.railway.app/food',
         {
           method: 'POST',
 

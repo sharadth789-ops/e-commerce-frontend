@@ -36,7 +36,7 @@ const OrderForm = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8090/order", {
+      const response = await fetch("https://e-commerce-backend-production-ce82.up.railway.app/order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

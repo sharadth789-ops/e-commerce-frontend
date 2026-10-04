@@ -7,7 +7,7 @@ const TrackOrder = () => {
 
   const getOrders = async () => {
     try {
-      const response = await fetch("http://localhost:8090/orders");
+      const response = await fetch("https://e-commerce-backend-production-ce82.up.railway.app/orders");
 
       if (!response.ok) {
         throw new Error("Failed to fetch orders");
@@ -30,7 +30,7 @@ const TrackOrder = () => {
   const deleteOrder = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8090/orders/${id}`,
+        "https://e-commerce-backend-production-ce82.up.railway.app/orders/${id}",
         {
           method: "DELETE"
         }
