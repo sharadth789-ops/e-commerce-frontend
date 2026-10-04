@@ -1,0 +1,427 @@
+/* =========================
+   FORM SECTION
+========================= */
+
+.form-section {
+  width: 90%;
+  max-width: 1000px;
+
+  margin: 40px auto;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 40px;
+
+  align-items: stretch;
+}
+
+
+/* =========================
+   ORDER FORM
+========================= */
+
+.Order-form {
+  padding: 35px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #eeeeee;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   FORM TITLE
+========================= */
+
+.Order-form::before {
+  content: "Place Your Order";
+
+  margin-bottom: 25px;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  color: #222;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.Order-form label {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  color: #333;
+}
+
+
+/* =========================
+   INPUT + SELECT
+========================= */
+
+.Order-form input,
+.Order-form select {
+
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 15px;
+
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #333;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================
+   INPUT FOCUS
+========================= */
+
+.Order-form input:focus,
+.Order-form select:focus {
+
+  border-color: #ff4d00;
+
+  box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.1);
+}
+
+
+/* =========================
+   PLACE ORDER BUTTON
+========================= */
+
+.form-btn {
+  margin-top: 8px;
+}
+
+.form-btn button {
+
+  width: 100%;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #ff4d00;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(255, 77, 0, 0.25);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-btn button:hover {
+
+  background: #e64000;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(255, 77, 0, 0.3);
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.Order-form > p {
+
+  margin: 15px 0 0;
+
+  text-align: center;
+
+  color: #16803c;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.contact-info {
+
+  padding: 35px;
+
+  border-radius: 18px;
+
+  background: #ff4d00;
+
+  color: #ffffff;
+
+  box-shadow: 0 8px 30px rgba(255, 77, 0, 0.2);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* =========================
+   CONTACT HEADING
+========================= */
+
+.contact-info h3 {
+
+  margin: 0 0 25px;
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.contact-info p {
+
+  margin: 10px 0;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   APP BUTTONS
+========================= */
+
+.form-buttons {
+
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.form-buttons button {
+
+  flex: 1;
+
+  min-height: 45px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.form-buttons button:hover {
+
+  background: #ffffff;
+
+  color: #ff4d00;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .form-section {
+
+    width: 90%;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin: 40px auto;
+  }
+
+  .contact-info {
+
+    min-height: 280px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .form-section {
+
+    width: 92%;
+
+    margin: 25px auto;
+
+    gap: 20px;
+  }
+
+
+  /* Form */
+
+  .Order-form {
+
+    padding: 22px;
+
+    border-radius: 15px;
+  }
+
+
+  .Order-form::before {
+
+    font-size: 23px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .Order-form label {
+
+    font-size: 13px;
+  }
+
+
+  .Order-form input,
+  .Order-form select {
+
+    height: 46px;
+
+    font-size: 14px;
+
+    margin-bottom: 16px;
+  }
+
+
+  .form-btn button {
+
+    height: 48px;
+
+    font-size: 15px;
+  }
+
+
+  /* Contact */
+
+  .contact-info {
+
+    padding: 25px;
+
+    border-radius: 15px;
+  }
+
+
+  .contact-info h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .contact-info p {
+
+    font-size: 14px;
+  }
+
+
+  .form-buttons {
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .form-buttons button {
+
+    width: 100%;
+
+    min-height: 45px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 350px) {
+
+  .form-section {
+
+    width: 95%;
+  }
+
+  .Order-form {
+
+    padding: 18px;
+  }
+
+  .contact-info {
+
+    padding: 20px;
+  }
+}

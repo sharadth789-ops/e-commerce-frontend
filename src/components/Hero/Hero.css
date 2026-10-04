@@ -1,0 +1,558 @@
+/* ================================
+   HERO SECTION
+================================ */
+
+#Home {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+
+  background: linear-gradient(
+    135deg,
+    #fff8f3 0%,
+    #ffffff 50%,
+    #fff3eb 100%
+  );
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+
+/* ================================
+   HERO CONTAINER
+================================ */
+
+.heroSection {
+  width: 90%;
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+
+  padding: 70px 0;
+}
+
+
+/* ================================
+   LEFT CONTENT
+================================ */
+
+.food-content {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* ================================
+   MAIN HEADING
+================================ */
+
+.food-content h1 {
+  margin: 0;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  color: #222;
+
+  letter-spacing: -2px;
+}
+
+
+/* Second heading */
+
+.food-content h2 {
+  margin: 8px 0 20px;
+
+  font-size: clamp(38px, 4vw, 60px);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  color: #ff4d00;
+
+  letter-spacing: -2px;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.food-title {
+  max-width: 550px;
+}
+
+.food-title p {
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #666;
+
+  font-weight: 400;
+}
+
+
+/* ================================
+   BUTTON CONTAINER
+================================ */
+
+.btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 35px;
+}
+
+
+/* ================================
+   ORDER BUTTON
+================================ */
+
+.order-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 135px;
+
+  padding: 14px 25px;
+
+  border-radius: 30px;
+
+  background: #ff4d00;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  box-shadow: 0 8px 20px rgba(255, 77, 0, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+
+.order-btn:hover {
+  background: #e64000;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(255, 77, 0, 0.35);
+}
+
+
+/* ================================
+   MENU BUTTON
+================================ */
+
+.menu-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 135px;
+
+  padding: 13px 25px;
+
+  border-radius: 30px;
+
+  border: 2px solid #ff4d00;
+
+  background: transparent;
+
+  color: #ff4d00;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+
+.menu-btn:hover {
+  background: #ff4d00;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(255, 77, 0, 0.25);
+}
+
+
+/* ================================
+   FOOD IMAGE
+================================ */
+
+.food-img {
+  width: 50%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+
+/* Decorative circle */
+
+.food-img::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  background: #ffe4d5;
+
+  border-radius: 50%;
+
+  z-index: 0;
+
+  animation: floatingCircle 5s ease-in-out infinite;
+}
+
+
+/* Image */
+
+.food-img img {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  max-width: 540px;
+
+  height: 430px;
+
+  object-fit: cover;
+
+  border-radius: 35px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.4s ease;
+}
+
+
+/* Image hover */
+
+.food-img img:hover {
+  transform: scale(1.02);
+}
+
+
+/* ================================
+   FLOATING ANIMATION
+================================ */
+
+@keyframes floatingCircle {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ================================
+   LARGE TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+  .heroSection {
+    width: 90%;
+
+    gap: 40px;
+  }
+
+
+  .food-content h1 {
+    font-size: 50px;
+  }
+
+  .food-content h2 {
+    font-size: 43px;
+  }
+
+
+  .food-title p {
+    font-size: 16px;
+  }
+
+
+  .food-img img {
+    height: 370px;
+  }
+
+
+  .food-img::before {
+    width: 350px;
+    height: 350px;
+  }
+
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+  #Home {
+    min-height: auto;
+  }
+
+
+  .heroSection {
+
+    width: 90%;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 60px 0;
+
+    gap: 50px;
+  }
+
+
+  /* Content */
+
+  .food-content {
+
+    width: 100%;
+
+    align-items: center;
+  }
+
+
+  .food-content h1 {
+
+    font-size: clamp(40px, 9vw, 55px);
+
+    letter-spacing: -1px;
+  }
+
+
+  .food-content h2 {
+
+    font-size: clamp(35px, 8vw, 48px);
+
+    letter-spacing: -1px;
+
+    margin-top: 5px;
+  }
+
+
+  .food-title {
+
+    max-width: 600px;
+  }
+
+
+  .food-title p {
+
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Buttons */
+
+  .btn {
+
+    justify-content: center;
+
+    margin-top: 30px;
+  }
+
+
+  /* Image */
+
+  .food-img {
+
+    width: 100%;
+  }
+
+
+  .food-img img {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 380px;
+
+    border-radius: 30px;
+  }
+
+
+  .food-img::before {
+
+    width: 380px;
+
+    height: 380px;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+  .heroSection {
+
+    width: 92%;
+
+    padding: 45px 0 55px;
+
+    gap: 40px;
+  }
+
+
+  .food-content h1 {
+
+    font-size: 42px;
+  }
+
+
+  .food-content h2 {
+
+    font-size: 36px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .food-title p {
+
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Buttons */
+
+  .btn {
+
+    width: 100%;
+
+    gap: 12px;
+
+    flex-direction: column;
+  }
+
+
+  .order-btn,
+  .menu-btn {
+
+    width: 100%;
+
+    max-width: 280px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* Image */
+
+  .food-img img {
+
+    height: 280px;
+
+    border-radius: 25px;
+  }
+
+
+  .food-img::before {
+
+    width: 280px;
+
+    height: 280px;
+  }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 350px) {
+
+  .food-content h1 {
+
+    font-size: 36px;
+  }
+
+
+  .food-content h2 {
+
+    font-size: 31px;
+  }
+
+
+  .food-title p {
+
+    font-size: 14px;
+  }
+
+
+  .food-img img {
+
+    height: 240px;
+  }
+
+}

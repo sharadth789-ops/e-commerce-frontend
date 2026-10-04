@@ -1,0 +1,472 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  --navbar-height: 75px;
+
+  height: var(--navbar-height);
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 5%;
+
+  background: #fff;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-name {
+  flex-shrink: 0;
+}
+
+.logo-name h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  color: #222;
+}
+
+.logo-name h1 span {
+  color: #ff4d00;
+}
+
+
+/* =========================
+   DESKTOP NAV
+========================= */
+
+.desktop-nav {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.desktop-nav ul {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.desktop-nav a {
+  position: relative;
+
+  color: #333;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.desktop-nav a:hover {
+  color: #ff4d00;
+}
+
+.desktop-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: #ff4d00;
+
+  transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.Cta-btn  button {
+    padding: 10px 40px;
+
+    border-radius: 10px;
+
+    border: none;
+
+      background: #e64000;
+  
+      color: #fff;
+
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease;
+
+} 
+
+.Cta-btn button:hover {
+  background: #e64000;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+
+  width: 45px;
+  height: 45px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5px;
+
+  cursor: pointer;
+
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 27px;
+  height: 3px;
+
+  background: #222;
+
+  border-radius: 5px;
+
+  transition: all 0.3s ease;
+}
+
+
+/* =========================
+   HAMBURGER ACTIVE
+========================= */
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu {
+  position: fixed;
+
+  top: 70px;
+  left: 0;
+
+  width: 100%;
+
+  padding: 20px;
+
+  background: white;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  transform: translateY(-120%);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+
+  z-index: 999;
+}
+
+.mobile-menu.show {
+  transform: translateY(0);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  /* Hide Desktop */
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .Cta-btn {
+    display: none;
+  }
+
+
+  /* Show Hamburger */
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+
+  /* =========================
+     MOBILE MENU
+  ========================= */
+
+  .mobile-menu {
+
+    position: fixed;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transform: translateY(-120%);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      transform 0.35s ease,
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+
+    z-index: 999;
+  }
+
+
+  /* Menu Open */
+
+  .mobile-menu.show {
+
+    transform: translateY(0);
+
+    opacity: 1;
+
+    visibility: visible;
+  }
+
+
+  /* =========================
+     MOBILE NAVIGATION
+  ========================= */
+
+  .mobile-menu nav {
+    width: 100%;
+  }
+
+  .mobile-menu nav ul {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .mobile-menu nav ul li {
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .mobile-menu nav ul li a {
+
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    transition:
+      background 0.3s ease,
+      color 0.3s ease,
+      padding-left 0.3s ease;
+  }
+
+
+  /* Link Hover */
+
+  .mobile-menu nav ul li a:hover {
+
+    background: #fff1eb;
+
+    color: #ff4d00;
+
+    padding-left: 22px;
+  }
+
+
+  /* =========================
+     MOBILE ORDER BUTTON
+  ========================= */
+
+  .mobile-menu > a {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    text-decoration: none;
+  }
+
+  .mobile-menu > a button {
+
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    background: #ff4d00;
+
+    color: #ffffff;
+
+    padding: 14px 20px;
+
+    border-radius: 25px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .mobile-menu > a button:hover {
+
+    background: #e64000;
+
+    transform: translateY(-2px);
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .logo-name h1 {
+    font-size: 25px;
+  }
+
+  .hamburger {
+    width: 40px;
+  }
+
+  .mobile-menu {
+    padding: 15px;
+  }
+}

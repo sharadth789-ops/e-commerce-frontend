@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #FFF8F0;
+  color: #222222;
+}
+
+html{
+  scroll-behavior: smooth;
+
+}
