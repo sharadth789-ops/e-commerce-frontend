@@ -4,8 +4,7 @@
 
 #Home {
   width: 100%;
-  min-height: calc(100vh - 75px);
-
+  min-height: auto;
   background: linear-gradient(
     135deg,
     #fff8f3 0%,
@@ -304,6 +303,10 @@
 
 @media (max-width: 1000px) {
 
+
+  #Home {
+    min-height: auto;
+  }
   .heroSection {
     width: 90%;
 
