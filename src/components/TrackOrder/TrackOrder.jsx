@@ -5,11 +5,11 @@ const TrackOrder = () => {
 
   const [orders, setOrders] = useState([]);
 
-  // Testing ke liye userId
-  const userId = 101;
+  // Temporary testing userId
+  const userId = 1;
 
-  // User ke orders fetch karna
   const getOrders = async () => {
+
     try {
 
       const response = await fetch(
@@ -31,14 +31,12 @@ const TrackOrder = () => {
     }
   };
 
-
-  // Page load hote hi orders fetch honge
   useEffect(() => {
+
     getOrders();
+
   }, []);
 
-
-  // Order delete karna
   const deleteOrder = async (id) => {
 
     try {
@@ -54,7 +52,6 @@ const TrackOrder = () => {
         throw new Error("Failed to delete order");
       }
 
-      // Delete ke baad UI se bhi order remove
       setOrders(
         orders.filter((order) => order.id !== id)
       );
@@ -66,13 +63,11 @@ const TrackOrder = () => {
     }
   };
 
-
   return (
 
     <section className="track-order">
 
       <h2>Track Your Orders</h2>
-
 
       {orders.length === 0 ? (
 
@@ -91,36 +86,30 @@ const TrackOrder = () => {
               Order #{order.id}
             </h3>
 
-
             <p>
               <strong>Name:</strong>{" "}
               {order.name}
             </p>
-
 
             <p>
               <strong>Phone:</strong>{" "}
               {order.number}
             </p>
 
-
             <p>
               <strong>Food Item:</strong>{" "}
               {order.foodItem}
             </p>
-
 
             <p>
               <strong>Address:</strong>{" "}
               {order.address}
             </p>
 
-
             <p>
               <strong>Payment:</strong>{" "}
               {order.payment}
             </p>
-
 
             <button
               onClick={() => deleteOrder(order.id)}
